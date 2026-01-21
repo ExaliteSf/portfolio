@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Léo Limousin | Développeur Web Junior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inconsolata:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            background: linear-gradient(135deg, #e8dcc7 0%, #d4c5a9 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ticket-container {
+            max-width: 420px;
+            width: 100%;
+            background: #f9f6f0;
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            position: relative;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ticket-container::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 8px,
+                #f9f6f0 8px,
+                #f9f6f0 16px
+            );
+        }
+
+        .ticket-container::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 8px,
+                #f9f6f0 8px,
+                #f9f6f0 16px
+            );
+        }
+
+        .ticket-content {
+            padding: 40px 30px;
+            position: relative;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0, 0, 0, 0.02) 1px,
+                    rgba(0, 0, 0, 0.02) 2px
+                );
+        }
+
+        .ticket-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .lang-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #333;
+            padding: 5px 10px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-btn.active {
+            background: #333;
+            color: #f9f6f0;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px dashed #333;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .store-name {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: 0.7;
+        }
+
+        .main-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 13px;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 11px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #999;
+        }
+
+        .contact-info div {
+            margin: 3px 0;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            animation: slideIn 0.6s ease-out backwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.3s; }
+        .section:nth-child(5) { animation-delay: 0.4s; }
+        .section:nth-child(6) { animation-delay: 0.5s; }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .item {
+            margin-bottom: 15px;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .item-company {
+            font-weight: 700;
+        }
+
+        .item-period {
+            font-size: 10px;
+            opacity: 0.7;
+        }
+
+        .item-description {
+            margin-left: 10px;
+            opacity: 0.85;
+            margin-top: 3px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 11px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            padding: 4px 0;
+        }
+
+        .skill-item::before {
+            content: '▸';
+            margin-right: 6px;
+            font-size: 8px;
+        }
+
+        .list-item {
+            margin-bottom: 8px;
+            font-size: 11px;
+            padding-left: 15px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .list-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #333;
+            font-size: 10px;
+            opacity: 0.7;
+        }
+
+        .footer-line {
+            margin: 5px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .barcode {
+            margin: 15px auto 10px;
+            width: 200px;
+            height: 50px;
+            background: repeating-linear-gradient(
+                90deg,
+                #000 0px,
+                #000 2px,
+                transparent 2px,
+                transparent 4px,
+                #000 4px,
+                #000 5px,
+                transparent 5px,
+                transparent 8px,
+                #000 8px,
+                #000 10px,
+                transparent 10px,
+                transparent 11px,
+                #000 11px,
+                #000 14px,
+                transparent 14px,
+                transparent 16px
+            );
+            opacity: 0.8;
+        }
+
+        .date-time {
+            font-size: 10px;
+            text-align: center;
+            margin-top: 10px;
+            opacity: 0.6;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .ticket-container {
+                animation: fadeIn 0.8s ease-out;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            
+            .ticket-content {
+                padding: 30px 20px;
+            }
+
+            .main-title {
+                font-size: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-container">
+        <div class="ticket-content">
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="switchLang('fr')">FR</button>
+                <button class="lang-btn" onclick="switchLang('en')">EN</button>
+            </div>
+
+            <!-- VERSION FRANÇAISE -->
+            <div class="lang-content active" id="fr-content">
+                <div class="header">
+                    <div class="store-name">Portfolio / CV</div>
+                    <div class="main-title">LÉO LIMOUSIN</div>
+                    <div class="subtitle">DÉVELOPPEUR WEB JUNIOR</div>
+                </div>
+
+                <div class="contact-info">
+                    <div>📍 Lyon, France</div>
+                    <div>💼 LinkedIn</div>
+                    <div>🔗 GitHub</div>
+                    <div>📅 Dispo : Septembre 2026</div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Profil</div>
+                    <div class="item">
+                        Développeur web junior avec profil hybride entre développement applicatif et SI. 
+                        Alternance chez SNCF Réseau depuis 2021, référent numérique pour 1 250 agents.
+                        J'aime construire des apps claires, maintenables et utiles.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Expérience</div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-company">SNCF Réseau</span>
+                            <span class="item-period">2021 - Présent</span>
+                        </div>
+                        <div>Correspondant SI & IT Support</div>
+                        <div class="item-description">
+                            • Administration SharePoint & gouvernance<br>
+                            • Support N1/N2 et gestion parc informatique<br>
+                            • Pilotage projets IT et accompagnement utilisateurs
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Projets</div>
+                    
+                    <div class="list-item">
+                        <strong>Stand Clash</strong> - Jeu multijoueur tour par tour<br>
+                        WebSockets, Next.js, Supabase
+                    </div>
+                    
+                    <div class="list-item">
+                        <strong>Metria</strong> - App de suivi patrimonial<br>
+                        Next.js, Railway
+                    </div>
+                    
+                    <div class="list-item">
+                        <strong>Prompter</strong> - Prompteur pour musicien<br>
+                        Next.js, Supabase, Netlify
+                    </div>
+                    
+                    <div class="list-item">
+                        <strong>AMDT Services</strong> - Site vitrine WordPress<br>
+                        amdt-services.fr
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Stack Tech</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">Next.js</div>
+                        <div class="skill-item">React</div>
+                        <div class="skill-item">Vue.js</div>
+                        <div class="skill-item">TypeScript</div>
+                        <div class="skill-item">Symfony</div>
+                        <div class="skill-item">WordPress</div>
+                        <div class="skill-item">PostgreSQL</div>
+                        <div class="skill-item">Supabase</div>
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">Git / GitHub</div>
+                        <div class="skill-item">SharePoint</div>
+                        <div class="skill-item">Power BI</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Formation</div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-company">ESGI Lyon</span>
+                            <span class="item-period">En cours</span>
+                        </div>
+                        <div>Mastère Ingénierie du Web</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Ce que j'aime</div>
+                    <div class="list-item">Projets liés à l'énergie, IoT et systèmes techniques</div>
+                    <div class="list-item">Applications orientées produit et utilisateur</div>
+                    <div class="list-item">Code propre, maintenable et bien structuré</div>
+                </div>
+            </div>
+
+            <!-- VERSION ANGLAISE -->
+            <div class="lang-content" id="en-content">
+                <div class="header">
+                    <div class="store-name">Portfolio / Resume</div>
+                    <div class="main-title">LÉO LIMOUSIN</div>
+                    <div class="subtitle">JUNIOR WEB DEVELOPER</div>
+                </div>
+
+                <div class="contact-info">
+                    <div>📍 Lyon, France</div>
+                    <div>💼 LinkedIn</div>
+                    <div>🔗 GitHub</div>
+                    <div>📅 Available: September 2026</div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Profile</div>
+                    <div class="item">
+                        Junior web dev with hybrid profile mixing app development and IT systems. 
+                        Working at SNCF Réseau since 2021, digital referent for 1,250 agents.
+                        I love building clear, maintainable and useful applications.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Experience</div>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-company">SNCF Réseau</span>
+                            <span class="item-period">2021 - Present</span>
+                        </div>
+                        <div>IT Correspondent & Support</div>
+                        <div class="item-description">
+                            • SharePoint administration & governance<br>
+                            • L1/L2 support and IT fleet management<br>
+                            • IT project management and user training
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Projects</div>
+                    
+                    <div class="list-item">
+                        <strong>Stand Clash</strong> - Turn-based multiplayer game<br>
+                        WebSockets, Next.js, Supabase
+                    </div>
+                    
+                    <div class="list-item">
+                        <strong>Metria</strong> - Asset tracking app<br>
+                        Next.js, Railway
+                    </div>
+                    
+                    <div class="list-item">
+                        <strong>Prompter</strong> - Teleprompter for musicians<br>
+                        Next.js, Supabase, Netlify
+                    </div>
+                    
+                    <div class="list-item">
+                        <strong>AMDT Services</strong> - WordPress showcase site<br>
+                        amdt-services.fr
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Tech Stack</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">Next.js</div>
+                        <div class="skill-item">React</div>
+                        <div class="skill-item">Vue.js</div>
+                        <div class="skill-item">TypeScript</div>
+                        <div class="skill-item">Symfony</div>
+                        <div class="skill-item">WordPress</div>
+                        <div class="skill-item">PostgreSQL</div>
+                        <div class="skill-item">Supabase</div>
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">Git / GitHub</div>
+                        <div class="skill-item">SharePoint</div>
+                        <div class="skill-item">Power BI</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ Education</div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-company">ESGI Lyon</span>
+                            <span class="item-period">Ongoing</span>
+                        </div>
+                        <div>Master's in Web Engineering</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">□ What I Love</div>
+                    <div class="list-item">Projects related to energy, IoT and technical systems</div>
+                    <div class="list-item">Product-oriented and user-focused applications</div>
+                    <div class="list-item">Clean, maintainable and well-structured code</div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="barcode"></div>
+                <div class="footer-line" id="footer-thanks">MERCI DE VOTRE ATTENTION</div>
+                <div class="footer-line">━━━━━━━━━━━━━━━━━━━━</div>
+                <div class="date-time" id="datetime"></div>
+                <div class="footer-line">N° TICKET: #CV-2026-LL</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gestion de la langue
+        let currentLang = 'fr';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            
+            // Toggle active state on buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Show/hide content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(lang + '-content').classList.add('active');
+            
+            // Update footer
+            const footerText = lang === 'fr' ? 'MERCI DE VOTRE ATTENTION' : 'THANK YOU FOR YOUR ATTENTION';
+            document.getElementById('footer-thanks').textContent = footerText;
+        }
+
+        // Afficher date et heure actuelle
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                year: 'numeric', 
+                month: '2-digit', 
+                day: '2-digit',
+                hour: '2-digit', 
+                minute: '2-digit'
+            };
+            const locale = currentLang === 'fr' ? 'fr-FR' : 'en-US';
+            document.getElementById('datetime').textContent = 
+                now.toLocaleDateString(locale, options).replace(',', ' -');
+        }
+        
+        updateDateTime();
+        setInterval(updateDateTime, 60000); // Update every minute
+    </script>
+</body>
+</html>
