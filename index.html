@@ -172,6 +172,16 @@
             margin: 3px 0;
         }
 
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.7;
+        }
+
         .section {
             margin-bottom: 25px;
             animation: slideIn 0.6s ease-out backwards;
@@ -182,6 +192,7 @@
         .section:nth-child(4) { animation-delay: 0.3s; }
         .section:nth-child(5) { animation-delay: 0.4s; }
         .section:nth-child(6) { animation-delay: 0.5s; }
+        .section:nth-child(7) { animation-delay: 0.6s; }
 
         @keyframes slideIn {
             from {
@@ -263,6 +274,17 @@
             content: '•';
             position: absolute;
             left: 0;
+        }
+
+        .list-item a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dotted #333;
+            transition: opacity 0.2s;
+        }
+
+        .list-item a:hover {
+            opacity: 0.7;
         }
 
         .footer {
@@ -363,19 +385,18 @@
 
                 <div class="contact-info">
                     <div>📍 Lyon, France</div>
-                    <div>💼 
-                        <a href="https://www.linkedin.com/in/l%C3%A9o-limousin-41b44a217/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
-                    <div>🔗 
-                        <a href="https://github.com/ExaliteSf" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                    <div>💼 <a href="https://www.linkedin.com/in/l%C3%A9o-limousin-41b44a217/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+                    <div>🔗 <a href="https://github.com/ExaliteSf" target="_blank" rel="noopener noreferrer">GitHub</a></div>
                     <div>📅 Dispo : Septembre 2026</div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Profil</div>
                     <div class="item">
-                        Développeur web junior avec profil hybride entre développement applicatif et SI. 
-                        Alternance chez SNCF Réseau depuis 2021, référent numérique pour 1 250 agents.
-                        J'aime construire des apps claires, maintenables et utiles.
+                        Développeur web junior issu d'un parcours long en alternance au sein d'un grand groupe, 
+                        avec un profil hybride mêlant développement applicatif, SI et culture produit. 
+                        Référent numérique chez SNCF Réseau, j'évolue dans des environnements structurés 
+                        avec des enjeux de qualité, sécurité et utilisabilité.
                     </div>
                 </div>
 
@@ -387,11 +408,13 @@
                             <span class="item-company">SNCF Réseau</span>
                             <span class="item-period">2023 - Présent</span>
                         </div>
-                        <div>Correspondant SI & IT Support</div>
+                        <div>Correspondant SI & Support IT</div>
                         <div class="item-description">
                             • Administration SharePoint & gouvernance<br>
-                            • Support N1/N2 et gestion parc informatique<br>
-                            • Pilotage projets IT et accompagnement utilisateurs
+                            • Référent numérique (~1 250 agents)<br>
+                            • Support N1/N2 et gestion parc IT/télécoms<br>
+                            • Pilotage projets IT et digitalisation<br>
+                            • Documentation technique et formation
                         </div>
                     </div>
 
@@ -400,12 +423,12 @@
                             <span class="item-company">SNCF Réseau</span>
                             <span class="item-period">2021 - 2023</span>
                         </div>
-                        <div>Développeur Outils Office 365</div>
+                        <div>Développeur Office 365 / Assistant IT</div>
                         <div class="item-description">
-                            • Assistant informatique de l'unité<br>
-                            • Développeurs D'applications Power Apps et rapports Power Bi<br>
-                            • Administrateur de site Share Point
-                            • Gestion d'outils de managements visuels
+                            • Développement Power Apps & Power BI<br>
+                            • Administration SharePoint<br>
+                            • Outils de management visuel<br>
+                            • Support informatique de proximité
                         </div>
                     </div>
                 </div>
@@ -414,55 +437,47 @@
                     <div class="section-title">□ Projets</div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://standclash-production.up.railway.app/register" target="_blank" rel="noopener noreferrer">Stand Clash</a>
-                        </strong> - Jeu multijoueur tour par tour<br>
-                        WebSockets, Next.js, Supabase
+                        <strong><a href="https://standclash-production.up.railway.app/register" target="_blank" rel="noopener noreferrer">Stand Clash</a></strong> - Jeu multijoueur tour par tour<br>
+                        Next.js · WebSockets · Supabase
                     </div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://metria-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Metria</a>
-                        </strong> - App de suivi patrimonial<br>
-                        Next.js, Railway
+                        <strong><a href="https://metria-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Metria</a></strong> - App de suivi patrimonial<br>
+                        Next.js · Railway · PostgreSQL
                     </div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://celebrated-sunflower-bd6871.netlify.app/" target="_blank" rel="noopener noreferrer">Prompter
-                                </a>
-                            </strong> - Prompteur pour musicien<br>
-                        Next.js, Supabase, Netlify
+                        <strong><a href="https://celebrated-sunflower-bd6871.netlify.app/" target="_blank" rel="noopener noreferrer">Prompter</a></strong> - Prompteur pour musicien<br>
+                        Next.js · Supabase · Netlify
                     </div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://amdt-services.fr/" target="_blank" rel="noopener noreferrer">AMDT Services</a>
-                        </strong> - Site vitrine WordPress<br>
-                        amdt-services.fr
+                        <strong><a href="https://amdt-services.fr/" target="_blank" rel="noopener noreferrer">AMDT Services</a></strong> - Site vitrine WordPress<br>
+                        WordPress · o2switch · SEO
                     </div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Stack Tech</div>
                     <div class="skills-grid">
-                        <div class="skill-item">Next.js</div>
-                        <div class="skill-item">React</div>
-                        <div class="skill-item">Vue.js</div>
+                        <div class="skill-item">Next.js / React</div>
+                        <div class="skill-item">Vue.js / Nuxt</div>
                         <div class="skill-item">TypeScript</div>
-                        <div class="skill-item">Symfony</div>
-                        <div class="skill-item">WordPress</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Symfony / PHP</div>
+                        <div class="skill-item">Python</div>
                         <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">Supabase</div>
                         <div class="skill-item">Docker</div>
-                        <div class="skill-item">Git / GitHub</div>
+                        <div class="skill-item">Git / CI/CD</div>
                         <div class="skill-item">SharePoint</div>
                         <div class="skill-item">Power BI</div>
+                        <div class="skill-item">Tailwind CSS</div>
                     </div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Formation</div>
+                    
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">ESGI Lyon</span>
@@ -470,27 +485,29 @@
                         </div>
                         <div>Mastère Ingénierie du Web</div>
                     </div>
+
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">CNAM Saint-Etienne</span>
+                            <span class="item-company">CNAM Saint-Étienne</span>
                             <span class="item-period">Obtenue</span>
                         </div>
-                        <div>Licence informatique option développement</div>
+                        <div>Licence Informatique (Dev)</div>
                     </div>
+
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">Lycée Saint-Joseph Chambon-Feugerolles</span>
-                            <span class="item-period">Obtenue</span>
+                            <span class="item-company">Lycée Saint-Joseph</span>
+                            <span class="item-period">Obtenu</span>
                         </div>
                         <div>BTS SIO option SLAM</div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <div class="section-title">□ Ce que j'aime</div>
-                    <div class="list-item">Projets liés à l'énergie, IoT et systèmes techniques</div>
-                    <div class="list-item">Applications orientées produit et utilisateur</div>
-                    <div class="list-item">Code propre, maintenable et bien structuré</div>
+                    <div class="section-title">□ Intérêts</div>
+                    <div class="list-item">Énergie, IoT et systèmes techniques</div>
+                    <div class="list-item">Applications orientées produit</div>
+                    <div class="list-item">Code propre et maintenable</div>
                 </div>
             </div>
 
@@ -504,19 +521,18 @@
 
                 <div class="contact-info">
                     <div>📍 Lyon, France</div>
-                    <div>💼 
-                        <a href="https://www.linkedin.com/in/l%C3%A9o-limousin-41b44a217/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
-                    <div>🔗 
-                        <a href="https://github.com/ExaliteSf" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                    <div>💼 <a href="https://www.linkedin.com/in/l%C3%A9o-limousin-41b44a217/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+                    <div>🔗 <a href="https://github.com/ExaliteSf" target="_blank" rel="noopener noreferrer">GitHub</a></div>
                     <div>📅 Available: September 2026</div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Profile</div>
                     <div class="item">
-                        Junior web dev with hybrid profile mixing app development and IT systems. 
-                        Working at SNCF Réseau since 2021, digital referent for 1,250 agents.
-                        I love building clear, maintainable and useful applications.
+                        Junior web developer with long-term apprenticeship experience at a major corporation, 
+                        combining application development, IT systems, and product culture. 
+                        Digital referent at SNCF Réseau, working in structured environments 
+                        with quality, security, and usability challenges.
                     </div>
                 </div>
 
@@ -530,9 +546,11 @@
                         </div>
                         <div>IT Correspondent & Support</div>
                         <div class="item-description">
-                            • SharePoint administration & governance<br>
-                            • L1/L2 support and IT fleet management<br>
-                            • IT project management and user training
+                            • SharePoint admin & governance<br>
+                            • Digital referent (~1,250 agents)<br>
+                            • L1/L2 support & IT/telecom fleet mgmt<br>
+                            • IT project management & digitalization<br>
+                            • Technical documentation & training
                         </div>
                     </div>
 
@@ -541,12 +559,12 @@
                             <span class="item-company">SNCF Réseau</span>
                             <span class="item-period">2021 - 2023</span>
                         </div>
-                        <div>Office 365 Tools Developer</div>
+                        <div>Office 365 Developer / IT Assistant</div>
                         <div class="item-description">
-                            • IT support assistant for the unit<br>
-                            • Power Apps application and Power BI report developer<br>
-                            • SharePoint site administrator<br>
-                            • Management of visual management tools
+                            • Power Apps & Power BI development<br>
+                            • SharePoint administration<br>
+                            • Visual management tools<br>
+                            • Proximity IT support
                         </div>
                     </div>
                 </div>
@@ -555,49 +573,41 @@
                     <div class="section-title">□ Projects</div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://standclash-production.up.railway.app/register" target="_blank" rel="noopener noreferrer">Stand Clash</a>
-                        </strong> - Turn-based multiplayer game<br>
-                        WebSockets, Next.js, Supabase
+                        <strong><a href="https://standclash-production.up.railway.app/register" target="_blank" rel="noopener noreferrer">Stand Clash</a></strong> - Turn-based multiplayer game<br>
+                        Next.js · WebSockets · Supabase
                     </div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://metria-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Metria</a>
-                        </strong> - Asset tracking app<br>
-                        Next.js, Railway
+                        <strong><a href="https://metria-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Metria</a></strong> - Asset tracking app<br>
+                        Next.js · Railway · PostgreSQL
                     </div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://celebrated-sunflower-bd6871.netlify.app/" target="_blank" rel="noopener noreferrer">Prompter</a>
-                        </strong> - Teleprompter for musicians<br>
-                        Next.js, Supabase, Netlify
+                        <strong><a href="https://celebrated-sunflower-bd6871.netlify.app/" target="_blank" rel="noopener noreferrer">Prompter</a></strong> - Teleprompter for musicians<br>
+                        Next.js · Supabase · Netlify
                     </div>
                     
                     <div class="list-item">
-                        <strong>
-                            <a href="https://amdt-services.fr/" target="_blank" rel="noopener noreferrer">AMDT Services</a>
-                        </strong> - WordPress showcase site<br>
-                        amdt-services.fr
+                        <strong><a href="https://amdt-services.fr/" target="_blank" rel="noopener noreferrer">AMDT Services</a></strong> - WordPress showcase site<br>
+                        WordPress · o2switch · SEO
                     </div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Tech Stack</div>
                     <div class="skills-grid">
-                        <div class="skill-item">Next.js</div>
-                        <div class="skill-item">React</div>
-                        <div class="skill-item">Vue.js</div>
+                        <div class="skill-item">Next.js / React</div>
+                        <div class="skill-item">Vue.js / Nuxt</div>
                         <div class="skill-item">TypeScript</div>
-                        <div class="skill-item">Symfony</div>
-                        <div class="skill-item">WordPress</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Symfony / PHP</div>
+                        <div class="skill-item">Python</div>
                         <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">Supabase</div>
                         <div class="skill-item">Docker</div>
-                        <div class="skill-item">Git / GitHub</div>
+                        <div class="skill-item">Git / CI/CD</div>
                         <div class="skill-item">SharePoint</div>
                         <div class="skill-item">Power BI</div>
+                        <div class="skill-item">Tailwind CSS</div>
                     </div>
                 </div>
 
@@ -607,34 +617,33 @@
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">ESGI Lyon</span>
-                            <span class="item-period">In progress</span>
+                            <span class="item-period">Ongoing</span>
                         </div>
-                        <div>Master’s Degree in Web Engineering</div>
+                        <div>Master's in Web Engineering</div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">CNAM Saint-Etienne</span>
+                            <span class="item-company">CNAM Saint-Étienne</span>
                             <span class="item-period">Completed</span>
                         </div>
-                        <div>Bachelor’s Degree in Computer Science (Software Development)</div>
+                        <div>Bachelor's in CS (Development)</div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">Lycée Saint-Joseph Chambon-Feugerolles</span>
+                            <span class="item-company">Lycée Saint-Joseph</span>
                             <span class="item-period">Completed</span>
                         </div>
                         <div>BTS SIO (SLAM)</div>
                     </div>
                 </div>
 
-
                 <div class="section">
-                    <div class="section-title">□ What I Love</div>
-                    <div class="list-item">Projects related to energy, IoT and technical systems</div>
-                    <div class="list-item">Product-oriented and user-focused applications</div>
-                    <div class="list-item">Clean, maintainable and well-structured code</div>
+                    <div class="section-title">□ Interests</div>
+                    <div class="list-item">Energy, IoT and technical systems</div>
+                    <div class="list-item">Product-oriented applications</div>
+                    <div class="list-item">Clean and maintainable code</div>
                 </div>
             </div>
 
@@ -688,8 +697,7 @@
         }
         
         updateDateTime();
-        setInterval(updateDateTime, 60000); // Update every minute
-        //test
+        setInterval(updateDateTime, 60000);
     </script>
 </body>
 </html>
