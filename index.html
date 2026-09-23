@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Léo Limousin | Développeur Web Junior</title>
+    <title>CV - Léo Limousin | Développeur Fullstack</title>
     <link rel="icon" type="image/png" href="logo_portfolio.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
             max-width: 420px;
             width: 100%;
             background: #f9f6f0;
-            box-shadow: 
+            box-shadow:
                 0 10px 40px rgba(0, 0, 0, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 0.5);
             position: relative;
@@ -82,7 +82,7 @@
         .ticket-content {
             padding: 40px 30px;
             position: relative;
-            background-image: 
+            background-image:
                 repeating-linear-gradient(
                     0deg,
                     transparent,
@@ -194,6 +194,7 @@
         .section:nth-child(5) { animation-delay: 0.4s; }
         .section:nth-child(6) { animation-delay: 0.5s; }
         .section:nth-child(7) { animation-delay: 0.6s; }
+        .section:nth-child(8) { animation-delay: 0.7s; }
 
         @keyframes slideIn {
             from {
@@ -247,14 +248,29 @@
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 4px 8px;
             font-size: 11px;
+        }
+
+        .skill-category-label {
+            grid-column: 1 / -1;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            margin-top: 8px;
+            margin-bottom: 2px;
+        }
+
+        .skill-category-label:first-child {
+            margin-top: 0;
         }
 
         .skill-item {
             display: flex;
             align-items: center;
-            padding: 4px 0;
+            padding: 2px 0;
         }
 
         .skill-item::before {
@@ -353,7 +369,7 @@
             body {
                 padding: 20px 10px;
             }
-            
+
             .ticket-content {
                 padding: 30px 20px;
             }
@@ -381,51 +397,67 @@
                 <div class="header">
                     <div class="store-name">Portfolio / CV</div>
                     <div class="main-title">LÉO LIMOUSIN</div>
-                    <div class="subtitle">DÉVELOPPEUR WEB JUNIOR</div>
+                    <div class="subtitle">DÉVELOPPEUR FULLSTACK</div>
                 </div>
 
                 <div class="contact-info">
-                    <div>📍 Lyon, France</div>
+                    <div>📍 Lyon, Auvergne-Rhône-Alpes</div>
+                    <div>📞 07 82 34 19 21</div>
                     <div>💼 <a href="https://www.linkedin.com/in/l%C3%A9o-limousin-41b44a217/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
                     <div>🔗 <a href="https://github.com/ExaliteSf" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-                    <div>📅 Dispo : Septembre 2026</div>
+                    <div>📅 Dispo : 1er Octobre 2026</div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Profil</div>
                     <div class="item">
-                        Développeur web junior issu d'un parcours long en alternance, avec un profil hybride 
-                        mêlant développement full-stack, intégrations API et culture produit. Référent numérique 
-                        chez SNCF Réseau, j'évolue dans des environnements structurés avec des enjeux de qualité, 
-                        sécurité et utilisabilité. Expérience concrète en déploiement production, sécurité web 
-                        (OAuth2, CSRF, CSP) et paiements en ligne (Stripe).
+                        Développeur full stack spécialisé sur Frameworks Angular, Symfony, Next.js, React.
+                        Fort d'une alternance de 5 ans au sein de SNCF Réseau, j'ai acquis une expérience
+                        concrète en environnement grand groupe avec des enjeux de qualité, sécurité,
+                        accessibilité et utilisabilité. Je conçois des applications web maintenables,
+                        performantes et orientées utilisateur.
                     </div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Expérience</div>
-                    
+
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">SNCF Réseau</span>
-                            <span class="item-period">2023 - Présent</span>
+                            <span class="item-company">Glazdev — Aurec-sur-Loire</span>
+                            <span class="item-period">Juil. 2026 - Présent</span>
                         </div>
-                        <div>Correspondant SI & Support IT</div>
+                        <div>Développeur Web Freelance</div>
                         <div class="item-description">
-                            • Administration SharePoint & gouvernance<br>
-                            • Référent numérique (~1 250 agents)<br>
-                            • Support N1/N2 et gestion parc IT/télécoms<br>
-                            • Pilotage projets IT et digitalisation<br>
-                            • Documentation technique et formation
+                            • Création et gestion d'un studio web (micro-entreprise)<br>
+                            • Conception de sites vitrines, web apps et SaaS sur-mesure<br>
+                            • Dev full-stack : Next.js, React, TS, Symfony, PostgreSQL, Prisma<br>
+                            • Gestion complète du cycle projet : cadrage → mise en production
                         </div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">SNCF Réseau</span>
-                            <span class="item-period">2021 - 2023</span>
+                            <span class="item-company">SNCF Réseau — Lyon</span>
+                            <span class="item-period">Sept. 2023 - Sept. 2026</span>
                         </div>
-                        <div>Développeur Office 365 / Assistant IT</div>
+                        <div>Correspondant SI & Support IT</div>
+                        <div class="item-description">
+                            • Administration SharePoint & gouvernance<br>
+                            • Gestion des habilitations et sécurité des accès<br>
+                            • Référent numérique (~1 250 agents)<br>
+                            • Support N1/N2 et gestion parc IT/télécoms<br>
+                            • Pilotage projets IT et digitalisation<br>
+                            • Rédaction de documentation technique et fonctionnelle
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-company">SNCF Réseau — Lyon</span>
+                            <span class="item-period">Sept. 2021 - Sept. 2023</span>
+                        </div>
+                        <div>Développeur Outils Office 365 / Assistant IT</div>
                         <div class="item-description">
                             • Développement Power Apps & Power BI<br>
                             • Administration SharePoint<br>
@@ -437,27 +469,28 @@
 
                 <div class="section">
                     <div class="section-title">□ Projets</div>
-                    
-                    <div class="list-item">
-                        <strong><a href="https://shop.kwzz.fr/" target="_blank" rel="noopener noreferrer">Kwzz'Shop</a></strong> - E-commerce Blox Fruits<br>
-                        Flask · MySQL · Stripe · OAuth2 · Railway<br>
-                        <span style="opacity:0.65">300 utilisateurs · 112 commandes</span>
-                    </div>
 
                     <div class="list-item">
                         <strong><a href="https://bloxtracker.fr" target="_blank" rel="noopener noreferrer">BloxTracker</a></strong> - Tracker de progression Blox Fruits<br>
-                        Next.js 15 · TypeScript · Prisma · PostgreSQL · NextAuth · Railway<br>
-                        <span style="opacity:0.65">230 utilisateurs · Auth Discord · Leaderboard</span>
+                        Next.js · TypeScript · Prisma · PostgreSQL · NextAuth · Railway<br>
+                        <span style="opacity:0.65">500 utilisateurs · Auth Discord · Leaderboard</span>
+                    </div>
+
+                    <div class="list-item">
+                        <strong><a href="https://shop.kwzz.fr/" target="_blank" rel="noopener noreferrer">Kwzz'Shop</a></strong> - E-commerce game pass Roblox<br>
+                        Flask · MySQL · Stripe · OAuth2 Discord · Railway<br>
+                        <span style="opacity:0.65">300 utilisateurs · 112 commandes · 4 800€ de C.A</span>
+                    </div>
+
+                    <div class="list-item">
+                        <strong>JM Full services</strong> - Site vitrine multilingue (fr/en/es)<br>
+                        Next.js · TypeScript · PostgreSQL · Cloudinary · Railway<br>
+                        <span style="opacity:0.65">Back-office complet · SEO technique · Auth sécurisé</span>
                     </div>
 
                     <div class="list-item">
                         <strong><a href="https://lesinouisofficiel.fr" target="_blank" rel="noopener noreferrer">Les Inouis Officiel</a></strong> - Site vitrine artiste<br>
                         Astro · Tailwind · Railway · OVH
-                    </div>
-
-                    <div class="list-item">
-                        <strong><a href="https://metria-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Metria</a></strong> - App de suivi patrimonial<br>
-                        Next.js · Railway · PostgreSQL
                     </div>
 
                     <div class="list-item">
@@ -467,56 +500,76 @@
                 </div>
 
                 <div class="section">
-                    <div class="section-title">□ Stack Tech</div>
+                    <div class="section-title">□ Compétences Techniques</div>
                     <div class="skills-grid">
-                        <div class="skill-item">Next.js / React</div>
-                        <div class="skill-item">Vue.js / Nuxt</div>
-                        <div class="skill-item">Astro / Tailwind</div>
-                        <div class="skill-item">TypeScript</div>
-                        <div class="skill-item">Python / Flask</div>
-                        <div class="skill-item">Node.js</div>
+                        <div class="skill-category-label">Front-End</div>
+                        <div class="skill-item">JavaScript ES6+ / TS</div>
+                        <div class="skill-item">React / Next.js</div>
+                        <div class="skill-item">Vue.js / Nuxt.js</div>
+                        <div class="skill-item">HTML5 / CSS3 / SASS</div>
+                        <div class="skill-item">Tailwind CSS</div>
+                        <div class="skill-item">Astro</div>
+
+                        <div class="skill-category-label">Back-End</div>
+                        <div class="skill-item">Node.js / Nest.js</div>
                         <div class="skill-item">Symfony / PHP</div>
+                        <div class="skill-item">Angular</div>
+                        <div class="skill-item">Python / Flask</div>
+                        <div class="skill-item">Java / C#</div>
+                        <div class="skill-item">Laravel</div>
+
+                        <div class="skill-category-label">Bases de données</div>
                         <div class="skill-item">PostgreSQL / MySQL</div>
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">Git / CI/CD</div>
-                        <div class="skill-item">Stripe API</div>
-                        <div class="skill-item">Sécurité web</div>
+                        <div class="skill-item">SQLite / Supabase</div>
+                        <div class="skill-item">Prisma / Doctrine</div>
+
+                        <div class="skill-category-label">DevOps & Architecture</div>
+                        <div class="skill-item">Docker / CI-CD</div>
+                        <div class="skill-item">Clean Architecture</div>
+                        <div class="skill-item">OWASP / Auth web</div>
+                        <div class="skill-item">Railway / Netlify</div>
+
+                        <div class="skill-category-label">Outils & Langues</div>
+                        <div class="skill-item">Git / GitHub / VS Code</div>
+                        <div class="skill-item">Postman / Power BI</div>
+                        <div class="skill-item">Anglais C1</div>
+                        <div class="skill-item">Espagnol A2</div>
                     </div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Formation</div>
-                    
+
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">ESGI Lyon</span>
-                            <span class="item-period">En cours</span>
+                            <span class="item-period">2024 - 2026</span>
                         </div>
-                        <div>Mastère Ingénierie du Web</div>
+                        <div>Mastère Ingénierie du Web (en cours)</div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">CNAM Saint-Étienne</span>
-                            <span class="item-period">Obtenue</span>
+                            <span class="item-period">2023 - 2024</span>
                         </div>
-                        <div>Licence Informatique (Dev)</div>
+                        <div>Licence Informatique - option Développement</div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">Lycée Saint-Joseph</span>
-                            <span class="item-period">Obtenu</span>
+                            <span class="item-period">2021 - 2023</span>
                         </div>
                         <div>BTS SIO option SLAM</div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <div class="section-title">□ Intérêts</div>
-                    <div class="list-item">Énergie, IoT et systèmes techniques</div>
-                    <div class="list-item">Applications orientées produit</div>
-                    <div class="list-item">Code propre et maintenable</div>
+                    <div class="section-title">□ Certifications</div>
+                    <div class="list-item">Certification RGPD — CNIL</div>
+                    <div class="list-item">Formation Power BI avancé — ORSYS</div>
+                    <div class="list-item">Formation SharePoint Expert — ORSYS</div>
                 </div>
             </div>
 
@@ -525,49 +578,64 @@
                 <div class="header">
                     <div class="store-name">Portfolio / Resume</div>
                     <div class="main-title">LÉO LIMOUSIN</div>
-                    <div class="subtitle">JUNIOR WEB DEVELOPER</div>
+                    <div class="subtitle">FULLSTACK DEVELOPER</div>
                 </div>
 
                 <div class="contact-info">
-                    <div>📍 Lyon, France</div>
+                    <div>📍 Lyon, Auvergne-Rhône-Alpes</div>
+                    <div>📞 07 82 34 19 21</div>
                     <div>💼 <a href="https://www.linkedin.com/in/l%C3%A9o-limousin-41b44a217/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
                     <div>🔗 <a href="https://github.com/ExaliteSf" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-                    <div>📅 Available: September 2026</div>
+                    <div>📅 Available: October 1st, 2026</div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Profile</div>
                     <div class="item">
-                        Junior web developer with long-term apprenticeship experience, combining full-stack 
-                        development, API integrations and product culture. Digital referent at SNCF Réseau, 
-                        working in structured environments with quality, security, and usability challenges. 
-                        Hands-on experience in production deployment, web security (OAuth2, CSRF, CSP) 
-                        and online payments (Stripe).
+                        Full stack developer specialized in Angular, Symfony, Next.js and React.
+                        With a 5-year apprenticeship at SNCF Réseau, I built hands-on experience in a
+                        large-scale corporate environment with quality, security, accessibility and
+                        usability challenges. I design maintainable, performant, user-oriented web applications.
                     </div>
                 </div>
 
                 <div class="section">
                     <div class="section-title">□ Experience</div>
-                    
+
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">SNCF Réseau</span>
-                            <span class="item-period">2023 - Present</span>
+                            <span class="item-company">Glazdev — Aurec-sur-Loire</span>
+                            <span class="item-period">Jul. 2026 - Present</span>
                         </div>
-                        <div>IT Correspondent & Support</div>
+                        <div>Freelance Web Developer</div>
                         <div class="item-description">
-                            • SharePoint admin & governance<br>
-                            • Digital referent (~1,250 agents)<br>
-                            • L1/L2 support & IT/telecom fleet mgmt<br>
-                            • IT project management & digitalization<br>
-                            • Technical documentation & training
+                            • Founded and managing an independent web studio (sole trader)<br>
+                            • Designing and building showcase sites, web apps and SaaS<br>
+                            • Full-stack dev: Next.js, React, TS, Symfony, PostgreSQL, Prisma<br>
+                            • Full project lifecycle: scoping → production deployment
                         </div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-company">SNCF Réseau</span>
-                            <span class="item-period">2021 - 2023</span>
+                            <span class="item-company">SNCF Réseau — Lyon</span>
+                            <span class="item-period">Sep. 2023 - Sep. 2026</span>
+                        </div>
+                        <div>IT Correspondent & Support</div>
+                        <div class="item-description">
+                            • SharePoint admin & governance<br>
+                            • User access management & security<br>
+                            • Digital referent (~1,250 agents)<br>
+                            • L1/L2 support & IT/telecom fleet management<br>
+                            • IT project management & digitalization<br>
+                            • Technical and functional documentation
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-company">SNCF Réseau — Lyon</span>
+                            <span class="item-period">Sep. 2021 - Sep. 2023</span>
                         </div>
                         <div>Office 365 Developer / IT Assistant</div>
                         <div class="item-description">
@@ -581,27 +649,28 @@
 
                 <div class="section">
                     <div class="section-title">□ Projects</div>
-                    
-                    <div class="list-item">
-                        <strong><a href="https://shop.kwzz.fr/" target="_blank" rel="noopener noreferrer">Kwzz'Shop</a></strong> - Blox Fruits E-commerce<br>
-                        Flask · MySQL · Stripe · OAuth2 · Railway<br>
-                        <span style="opacity:0.65">300 users · 112 orders</span>
-                    </div>
 
                     <div class="list-item">
                         <strong><a href="https://bloxtracker.fr" target="_blank" rel="noopener noreferrer">BloxTracker</a></strong> - Blox Fruits progression tracker<br>
-                        Next.js 15 · TypeScript · Prisma · PostgreSQL · NextAuth · Railway<br>
-                        <span style="opacity:0.65">230 users · Discord Auth · Leaderboard</span>
+                        Next.js · TypeScript · Prisma · PostgreSQL · NextAuth · Railway<br>
+                        <span style="opacity:0.65">500 users · Discord Auth · Leaderboard</span>
+                    </div>
+
+                    <div class="list-item">
+                        <strong><a href="https://shop.kwzz.fr/" target="_blank" rel="noopener noreferrer">Kwzz'Shop</a></strong> - Roblox game pass e-commerce<br>
+                        Flask · MySQL · Stripe · OAuth2 Discord · Railway<br>
+                        <span style="opacity:0.65">300 users · 112 orders · €4,800 revenue</span>
+                    </div>
+
+                    <div class="list-item">
+                        <strong>JM Full services</strong> - Multilingual showcase site (fr/en/es)<br>
+                        Next.js · TypeScript · PostgreSQL · Cloudinary · Railway<br>
+                        <span style="opacity:0.65">Full back-office · Technical SEO · Secure auth</span>
                     </div>
 
                     <div class="list-item">
                         <strong><a href="https://lesinouisofficiel.fr" target="_blank" rel="noopener noreferrer">Les Inouis Officiel</a></strong> - Artist showcase site<br>
                         Astro · Tailwind · Railway · OVH
-                    </div>
-
-                    <div class="list-item">
-                        <strong><a href="https://metria-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Metria</a></strong> - Asset tracking app<br>
-                        Next.js · Railway · PostgreSQL
                     </div>
 
                     <div class="list-item">
@@ -611,20 +680,40 @@
                 </div>
 
                 <div class="section">
-                    <div class="section-title">□ Tech Stack</div>
+                    <div class="section-title">□ Technical Skills</div>
                     <div class="skills-grid">
-                        <div class="skill-item">Next.js / React</div>
-                        <div class="skill-item">Vue.js / Nuxt</div>
-                        <div class="skill-item">Astro / Tailwind</div>
-                        <div class="skill-item">TypeScript</div>
-                        <div class="skill-item">Python / Flask</div>
-                        <div class="skill-item">Node.js</div>
+                        <div class="skill-category-label">Front-End</div>
+                        <div class="skill-item">JavaScript ES6+ / TS</div>
+                        <div class="skill-item">React / Next.js</div>
+                        <div class="skill-item">Vue.js / Nuxt.js</div>
+                        <div class="skill-item">HTML5 / CSS3 / SASS</div>
+                        <div class="skill-item">Tailwind CSS</div>
+                        <div class="skill-item">Astro</div>
+
+                        <div class="skill-category-label">Back-End</div>
+                        <div class="skill-item">Node.js / Nest.js</div>
                         <div class="skill-item">Symfony / PHP</div>
+                        <div class="skill-item">Angular</div>
+                        <div class="skill-item">Python / Flask</div>
+                        <div class="skill-item">Java / C#</div>
+                        <div class="skill-item">Laravel</div>
+
+                        <div class="skill-category-label">Databases</div>
                         <div class="skill-item">PostgreSQL / MySQL</div>
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">Git / CI/CD</div>
-                        <div class="skill-item">Stripe API</div>
-                        <div class="skill-item">Web Security</div>
+                        <div class="skill-item">SQLite / Supabase</div>
+                        <div class="skill-item">Prisma / Doctrine</div>
+
+                        <div class="skill-category-label">DevOps & Architecture</div>
+                        <div class="skill-item">Docker / CI-CD</div>
+                        <div class="skill-item">Clean Architecture</div>
+                        <div class="skill-item">OWASP / Web Auth</div>
+                        <div class="skill-item">Railway / Netlify</div>
+
+                        <div class="skill-category-label">Tools & Languages</div>
+                        <div class="skill-item">Git / GitHub / VS Code</div>
+                        <div class="skill-item">Postman / Power BI</div>
+                        <div class="skill-item">English C1</div>
+                        <div class="skill-item">Spanish A2</div>
                     </div>
                 </div>
 
@@ -634,33 +723,33 @@
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">ESGI Lyon</span>
-                            <span class="item-period">Ongoing</span>
+                            <span class="item-period">2024 - 2026</span>
                         </div>
-                        <div>Master's in Web Engineering</div>
+                        <div>Master's in Web Engineering (ongoing)</div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">CNAM Saint-Étienne</span>
-                            <span class="item-period">Completed</span>
+                            <span class="item-period">2023 - 2024</span>
                         </div>
-                        <div>Bachelor's in CS (Development)</div>
+                        <div>Bachelor's in CS — Development</div>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
                             <span class="item-company">Lycée Saint-Joseph</span>
-                            <span class="item-period">Completed</span>
+                            <span class="item-period">2021 - 2023</span>
                         </div>
                         <div>BTS SIO (SLAM)</div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <div class="section-title">□ Interests</div>
-                    <div class="list-item">Energy, IoT and technical systems</div>
-                    <div class="list-item">Product-oriented applications</div>
-                    <div class="list-item">Clean and maintainable code</div>
+                    <div class="section-title">□ Certifications</div>
+                    <div class="list-item">GDPR Certification — CNIL</div>
+                    <div class="list-item">Advanced Power BI Training — ORSYS</div>
+                    <div class="list-item">SharePoint Expert Training — ORSYS</div>
                 </div>
             </div>
 
@@ -675,44 +764,39 @@
     </div>
 
     <script>
-        // Gestion de la langue
         let currentLang = 'fr';
 
         function switchLang(lang) {
             currentLang = lang;
-            
-            // Toggle active state on buttons
+
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
-            
-            // Show/hide content
+
             document.querySelectorAll('.lang-content').forEach(content => {
                 content.classList.remove('active');
             });
             document.getElementById(lang + '-content').classList.add('active');
-            
-            // Update footer
+
             const footerText = lang === 'fr' ? 'MERCI DE VOTRE ATTENTION' : 'THANK YOU FOR YOUR ATTENTION';
             document.getElementById('footer-thanks').textContent = footerText;
         }
 
-        // Afficher date et heure actuelle
         function updateDateTime() {
             const now = new Date();
-            const options = { 
-                year: 'numeric', 
-                month: '2-digit', 
+            const options = {
+                year: 'numeric',
+                month: '2-digit',
                 day: '2-digit',
-                hour: '2-digit', 
+                hour: '2-digit',
                 minute: '2-digit'
             };
             const locale = currentLang === 'fr' ? 'fr-FR' : 'en-US';
-            document.getElementById('datetime').textContent = 
+            document.getElementById('datetime').textContent =
                 now.toLocaleDateString(locale, options).replace(',', ' -');
         }
-        
+
         updateDateTime();
         setInterval(updateDateTime, 60000);
     </script>
